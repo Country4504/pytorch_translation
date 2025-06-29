@@ -29,7 +29,7 @@ class Lang:
 
     # 对句子进行分词
     def addSentence(self, sentence):
-        for word in sentence.split(" "):     # 将 "你 吃饭 了 吗 ？"  分割为 ["你"，"吃"，"吃饭"，" 了"，" 吗"] 的list数组
+        for word in sentence.split(" "):     # 将 "你 吃饭 了 吗 ？"  分割为 ["你"，“吃”,“吃饭”," 了"," 吗"] 的list数组
             self.addWord(word)        # 依次将每个词统计
 
 
@@ -55,7 +55,7 @@ def readLangs(lang1, lang2, path):
         if len(sentence2.split(" ")) > MAX_LENGTH:
             continue
 
-        pairs.append([sentence1, sentence2])      # [["what are you doing?"，"你 在 干 什么"],....]
+        pairs.append([sentence1, sentence2])      # [[“what are you doing?”,"你 在 干 什么"],....]
         lang1_cls.addSentence(sentence1)      # 统计每种语言的词频
         lang2_cls.addSentence(sentence2)
 
@@ -65,7 +65,7 @@ def readLangs(lang1, lang2, path):
 # 测试
 # lang1 = "en"
 # lang2 = "cn"
-# path = "data/cmn.txt"
+# path = "../data/cmn.txt"
 # lang1_cls, lang2_cls, pairs = readLangs(lang1, lang2, path)
 #
 # print(len(pairs))

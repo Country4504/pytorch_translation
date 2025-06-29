@@ -14,7 +14,7 @@ MAX_LENGTH += 1   # 添加了终止符,比dataset中的的最大长度多1，因
 # 本任务完成英文到中文的翻译。若要倒过来，则要修改lang1和lang2的位置，还有pairs中的中英文词样本对的位置
 lang1 = "en"
 lang2 = "cn"
-path = "data/cmn.txt"
+path = "../data/cmn.txt"
 
 input_lang, output_lang, pairs = readLangs(lang1, lang2, path)
 # print(len(pairs))
@@ -150,9 +150,9 @@ for iter in range(1, n_iters+1):
     #保存模型
     if iter % save_every == 0:
         torch.save(encoder.state_dict(),
-                   "models/encoder_{}.pth".format(iter))
+                   "../models/encoder_{}.pth".format(iter))
         torch.save(decoder.state_dict(),
-                   "models/decoder_{}.pth".format(iter))
+                   "../models/decoder_{}.pth".format(iter))
 
     #更新学习率
     if iter % 1000:
