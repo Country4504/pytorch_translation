@@ -3,3 +3,4 @@ docx/
 *.png
 *.pptx
 __pycache__/
+models/

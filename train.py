@@ -115,7 +115,7 @@ criterion = nn.NLLLoss()
 
 # 不使用dataset,dataloader
 # 直接生成样本对训练
-n_iters = 10000      # 最大迭代次数
+n_iters = 100000      # 最大迭代次数
 training_pairs = [
     tensorsFromPair(random.choice(pairs)) for i in range(n_iters)   # 挑选1000000个样本对
 ]
