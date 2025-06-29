@@ -2,3 +2,4 @@ data/
 docx/
 *.png
 *.pptx
+__pycache__/

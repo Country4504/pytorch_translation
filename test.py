@@ -20,7 +20,7 @@ MAX_LENGTH = MAX_LENGTH + 1
 
 lang1 = "en"
 lang2 = "cn"
-path = "../data/cmn.txt"
+path = "./data/cmn.txt"
 input_lang, output_lang, pairs = readLangs(lang1, lang2, path)
 # print(len(pairs))
 # print(input_lang.n_words)
@@ -53,8 +53,8 @@ decoder = AttenDecoderRNN(hidden_size,
                           dropout_p=0.1).to(device)
 
 # 加载已经训练好的参数
-encoder.load_state_dict(torch.load("../models/encoder_10000.pth"))
-decoder.load_state_dict(torch.load("../models/decoder_10000.pth"))
+encoder.load_state_dict(torch.load("./models/encoder_10000.pth"))
+decoder.load_state_dict(torch.load("./models/decoder_10000.pth"))
 n_iters = 10
 
 train_sen_pairs = [

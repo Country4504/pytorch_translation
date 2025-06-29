@@ -65,7 +65,7 @@ def readLangs(lang1, lang2, path):
 # 测试
 # lang1 = "en"
 # lang2 = "cn"
-# path = "../data/cmn.txt"
+# path = "./data/cmn.txt"
 # lang1_cls, lang2_cls, pairs = readLangs(lang1, lang2, path)
 #
 # print(len(pairs))
